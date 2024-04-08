@@ -28,3 +28,30 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
+
+## Install Hardhat
+```shell
+npm init
+
+npm install --save-dev hardhat
+
+npx hardhat init
+
+# test
+npx hardhat
+```
+
+## Hardhat Command
+```shell
+# compile a contract
+npx hardhat compile
+
+# test a contract
+npx hardhat text
+
+# start a local-chain
+npx hardhat node
+
+# deploy a contract
+npx hardhat ignition deploy ignition/modules/Lock.js --network localhost
+```
