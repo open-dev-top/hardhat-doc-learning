@@ -22,10 +22,9 @@ node -v # should print `v20.12.1`
 npm -v # should print `10.5.0`
 
 # Add to PATH
-
-```
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
