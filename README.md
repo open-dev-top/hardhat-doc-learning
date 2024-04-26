@@ -19,6 +19,9 @@ nvm install 18
 node -v # should print `v18.20.2`
 # verifies the right NPM version is in the environment
 npm -v # should print `10.5.0`
+# enable yarn
+corepack enable
+yarn -v # should print `1.22.22`
 
 # Add to PATH
 export NVM_DIR="$HOME/.nvm"
@@ -27,6 +30,8 @@ export NVM_DIR="$HOME/.nvm"
 ```
 
 ## Install Hardhat
+
+### npm
 
 ```shell
 # install@latest
@@ -40,11 +45,45 @@ npx hardhat init
 npx hardhat
 ```
 
-## Hardhat Command
+### yarn
+
+````shell
+# install@latest
+yarn init -y
+
+yarn add --dev hardhat
+
+yarn hardhat init
+
+# verify install
+yarn hardhat
+
+## Hardhat Useful Command
+
+### npm
 
 ```shell
 # compile a contract
 npx hardhat compile
+
+# test a contract
+npx hardhat test
+
+# start a Local-Hardhat Network
+npx hardhat node
+
+# deploy a contract on the Hardhat Network
+npx hardhat ignition deploy ./ignition/modules/Lock.js
+
+# deploy a contract on the Local-Hardhat Network
+npx hardhat ignition deploy ./ignition/modules/Lock.js --network localhost
+````
+
+### yarn
+
+```shell
+# compile a contract
+yarn hardhat compile
 
 # test a contract
 npx hardhat test
