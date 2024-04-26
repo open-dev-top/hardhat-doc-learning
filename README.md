@@ -13,34 +13,30 @@ wsl -- install
 ```shell
 # installs NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-
 # download and install Node.js
 nvm install 18
-
 # verifies the right Node.js version is in the environment
-node -v # should print `v20.12.1`
-
+node -v # should print `v18.20.2`
 # verifies the right NPM version is in the environment
 npm -v # should print `10.5.0`
 
 # Add to PATH
 export NVM_DIR="$HOME/.nvm"
-
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
 ## Install Hardhat
 
 ```shell
+# install@latest
 npm init
 
 npm install --save-dev hardhat
 
 npx hardhat init
 
-# test
+# verify install
 npx hardhat
 ```
 
@@ -51,11 +47,14 @@ npx hardhat
 npx hardhat compile
 
 # test a contract
-npx hardhat text
+npx hardhat test
 
-# start a local-chain
+# start a Local-Hardhat Network
 npx hardhat node
 
-# deploy a contract
-npx hardhat ignition deploy ignition/modules/Lock.js --network localhost
+# deploy a contract on the Hardhat Network
+npx hardhat ignition deploy ./ignition/modules/Lock.js
+
+# deploy a contract on the Local-Hardhat Network
+npx hardhat ignition deploy ./ignition/modules/Lock.js --network localhost
 ```
