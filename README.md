@@ -47,7 +47,7 @@ npx hardhat
 
 ### yarn
 
-````shell
+```shell
 # install@latest
 yarn init -y
 
@@ -57,6 +57,7 @@ yarn hardhat init
 
 # verify install
 yarn hardhat
+```
 
 ## Hardhat Useful Command
 
@@ -86,14 +87,13 @@ npx hardhat ignition deploy ./ignition/modules/Lock.js --network localhost
 yarn hardhat compile
 
 # test a contract
-npx hardhat test
+yarn hardhat test
 
 # start a Local-Hardhat Network
-npx hardhat node
+yarn hardhat node
 
 # deploy a contract on the Hardhat Network
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+yarn hardhat ignition deploy ./ignition/modules/Lock.js
 
 # deploy a contract on the Local-Hardhat Network
-npx hardhat ignition deploy ./ignition/modules/Lock.js --network localhost
-```
+yarn hardhat ignition deploy ./ignition/modules/Lock.js --network localhost
